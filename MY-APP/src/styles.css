@@ -1,0 +1,129 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/indigo-pink.css'; 
+ /*@import '~@angular/material/prebuilt-themes/purple-green.css';
+/@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/purple-green.css'; 
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
+
+
+html, body {padding:0; margin:0; height:100%;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.header-margin{
+    margin-left: 796px;
+}
+
+
+snack-bar-container.success {
+    background-color: #5cb85c;
+    color : #fff;
+  }
+
+  snack-bar-container.warn {
+    background-color: #f99157;
+    color : #fff;
+  }
+
+
+
+
+  .header-sticky{
+    position:sticky;
+    top: 0 ;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .footer-sticky{
+    position:sticky;
+    bottom: 0 ;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .custom_menu{
+    background-color: #3f51b5;
+  }
+
+  .mat-menu-panel {
+     min-width: 112px; 
+    max-width: 280px;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-height: calc(100vh - 48px);
+    border-radius: 4px;
+    outline: 0;
+    min-height: 64px;
+    background-color: #3f51b5;
+}
+
+.mat-drawer-container {
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  display: block;
+  overflow: hidden;
+  height: 600px;
+  width: 100%;
+  background-color: white;
+}
+  
+.mat-drawer {
+  position: relative;
+  z-index: 4;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 3;
+  outline: 0;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: #3f51b5;
+  transform: translate3d(-100%, 0, 0);
+}
+
+.mat-toolbar-color{
+
+  background-color: white;
+  color: #3f51b5;;
+}
+
+
+/* layout setup */
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+section.content {
+  flex: 1;
+}
+
+.edit-panel{
+  margin-left: 39px;
+  margin-top: 22px;
+  width:80%;
+
+}
+
+.mat-drawer-content{
+  background-color:#dee2e6;
+}
+
+.paginator{
+
+  background-color:#dee2e6;
+
+}
+
+ 
+
+
+
+
