@@ -1,4 +1,5 @@
-# api
+# Instruction to RUN demo app
+#api
 Please follow the below steps to run mock API
  1.import api folder to VS code editor.
  2.Open new terminal in VS
