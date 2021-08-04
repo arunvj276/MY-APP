@@ -1,5 +1,5 @@
 # Instruction to RUN demo app
-#api
+#api -
 Please follow the below steps to run mock API
  1.import api folder to VS code editor.
  2.Open new terminal in VS
@@ -7,7 +7,7 @@ Please follow the below steps to run mock API
  4.Once installation done. Run this command "npm run json:server"
  5.Once it is done. The mock api's are ready to use.(Example - http://localhost:3000/customer)
 
-#MY-APP
+#MY-APP -
 Please follow the below steps to run MY-APP application.
   1.import MY-APP folder to VS code editor.
   2.Open new terminal in VS
