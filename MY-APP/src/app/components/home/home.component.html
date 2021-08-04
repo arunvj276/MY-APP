@@ -1,0 +1,212 @@
+<!-- <mat-toolbar color="primary" class="header-sticky">
+  <mat-toolbar-row>
+    <span>My App</span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="align-center"></span>
+    <span class="example-spacer"></span>
+    <div class="header-margin">
+      <button mat-button (click)="logout()" routerLinkActlive="active">Logout</button>
+      <button mat-button>About</button>
+      <button mat-button>Contact</button>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>
+        <mat-icon>dialpad</mat-icon>
+        <span>Redial</span>
+      </button>
+      <button mat-menu-item disabled>
+        <mat-icon>voicemail</mat-icon>
+        <span>Check voicemail</span>
+      </button>
+      <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon>
+        <span>Disable alerts</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar> -->
+
+<!-- <mat-sidenav-container class="header-sticky">
+  <mat-sidenav mode="side" opened class="mat-elevation-z8 " color="primary">
+  <mat-drawer-container class="example-container mat-typography" autosize>
+    <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+      <button mat-mini-fab (click)="isExpanded = !isExpanded" color="warn" style="margin: 10px;">
+        <mat-icon aria-label="Menu">menu</mat-icon>
+      </button>
+      <mat-nav-list class="mat-list-base white-icon">
+        <a mat-list-item [matMenuTriggerFor]="customerMenu" class="white-icon">
+          <mat-icon>dashboard</mat-icon>&nbsp;<label *ngIf="isExpanded">Customer Service</label>
+        </a>
+        <a mat-list-item [matMenuTriggerFor]="productMenu" class="white-icon">
+          <mat-icon>add_shopping_cart</mat-icon>&nbsp;<label *ngIf="isExpanded">Product Service</label>
+        </a>
+        <a mat-list-item [matMenuTriggerFor]="userMenu" [hidden]="!hasAdmin" class="white-icon">
+          <mat-icon>account_box</mat-icon>&nbsp;<label *ngIf="isExpanded">User Service</label>
+        </a>
+
+        <mat-menu #productMenu="matMenu" xPosition="before" class="layout-row layout-align-end-start">
+          <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
+            <a class="text-decoration" routerLink="/home/product">
+              <mat-icon class="white-icon">add_to_queue</mat-icon>&nbsp;<label>Create Product</label>
+            </a>
+          </button>
+          <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
+            <a class="text-decoration" routerLink="/home/product/core">
+              <mat-icon class="white-icon">update</mat-icon>&nbsp;<label>View & Update Product</label>
+            </a>
+          </button>
+          <button mat-menu-item [hidden]="hasAdmin" class="custom_menu">
+            <a class="text-decoration" routerLink="/home/product/core">
+              <mat-icon class="white-icon">view_list</mat-icon>&nbsp;<label>View Product</label>
+            </a>
+          </button>
+        </mat-menu>
+
+        <mat-menu #customerMenu="matMenu" xPosition="before">
+          <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
+            <mat-icon class="white-icon">add_to_queue</mat-icon>
+            <a class="text-decoration" routerLink="/home/customer">&nbsp;<label>Create Customer</label></a>
+          </button>
+          <button mat-menu-item [hidden]="!hasAdmin">
+            <mat-icon class="white-icon">update</mat-icon>
+            <a class="text-decoration" routerLink="/home/core">&nbsp;<label>View & Update Customer</label></a>
+          </button>
+          <button mat-menu-item [hidden]="hasAdmin">
+            <mat-icon class="white-icon">view_list</mat-icon>
+            <a class="text-decoration" routerLink="/home/core">&nbsp;<label>View Customer</label></a>
+          </button>
+        </mat-menu>
+
+        <mat-menu #userMenu="matMenu" xPosition="before">
+          <button mat-menu-item class="custom_menu">
+            <mat-icon class="white-icon">supervised_user_circle</mat-icon>
+            <a class="text-decoration" routerLink="/home/user/core">&nbsp;<label>Users</label></a>
+          </button>
+          <button mat-menu-item>
+            <mat-icon class="white-icon">verified_user</mat-icon>
+            <a class="text-decoration" routerLink="/home/role/core">&nbsp;<label>Roles</label></a>
+          </button>
+        </mat-menu>
+      </mat-nav-list>
+    </mat-drawer>
+  </mat-drawer-container>
+  </mat-sidenav> 
+  <mat-sidenav-content>
+    <div class="mat-elevation-z8 nav-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container> -->
+<div class="flex-container">
+<mat-drawer-container class="mat-typography" autosize >
+  <mat-drawer #drawer mode="side" disableClose="true" opened="true">
+    <button mat-mini-fab (click)="isExpanded = !isExpanded" color="warn" style="margin: 10px;">
+      <mat-icon aria-label="Menu">menu</mat-icon>
+    </button>
+    <mat-divider></mat-divider>
+    <mat-nav-list>
+      <mat-divider></mat-divider>
+      <a mat-list-item [matMenuTriggerFor]="customerMenu" class="white-icon">
+        <mat-icon mat-list-icon>dashboard</mat-icon>
+        <label mat-line *ngIf="isExpanded">Customer Service</label>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [matMenuTriggerFor]="productMenu" class="white-icon">
+        <mat-icon mat-list-icon>add_shopping_cart</mat-icon>
+        <label mat-line *ngIf="isExpanded">Product Service</label>
+      </a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [matMenuTriggerFor]="userMenu" class="white-icon">
+        <mat-icon mat-list-icon>account_box</mat-icon>
+        <label mat-line *ngIf="isExpanded">User Service</label>
+      </a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-drawer>
+  <div>
+  <mat-toolbar class="header-sticky mat-toolbar-color">
+  <mat-toolbar-row>
+    <span>{{header}}</span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="align-center"></span>
+    <span class="example-spacer"></span>
+    <div class="header-margin">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="white-icon">
+        <mat-icon mat-list-icon class="blue-icon">account_circle</mat-icon>&nbsp;
+        <span mat-line class="blue-icon">{{user}}</span>
+      </button>
+    </div>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="logout()">
+        <mat-icon class="white-icon">highlight_off</mat-icon>
+        <span class="white-icon">Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar-row>
+</mat-toolbar>
+</div>
+<mat-divider></mat-divider>
+<section class="content">
+    <router-outlet></router-outlet>
+  </section>
+</mat-drawer-container>
+
+<footer class="md-padding footer-view">
+  <div id="btmFooter">
+    <img class="img-responsive" src="assets/Ericsson.png" alt="image">&nbsp;&nbsp;
+    <div class="emoji-footer">
+      <mat-icon class="white-icon">thumb_up_alt</mat-icon>&nbsp;&nbsp;
+      <mat-icon class="white-icon">sentiment_very_satisfied</mat-icon>&nbsp;&nbsp;
+      <mat-icon class="white-icon">share</mat-icon>
+    </div>
+  </div>
+</footer>
+</div>
+<!-- List of Menus -->
+<mat-menu #customerMenu="matMenu" xPosition="before">
+  <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
+    <mat-icon class="white-icon">add_to_queue</mat-icon>
+    <a class="text-decoration" (click)="header='Customer Service'" routerLink="/home/customer">&nbsp;<label>Create Customer</label></a>
+  </button>
+  <button mat-menu-item [hidden]="!hasAdmin">
+    <mat-icon class="white-icon">update</mat-icon>
+    <a class="text-decoration" (click)="header='Customer Service'" routerLink="/home/core">&nbsp;<label>View & Update Customer</label></a>
+  </button>
+  <button mat-menu-item [hidden]="hasAdmin">
+    <mat-icon class="white-icon">view_list</mat-icon>
+    <a class="text-decoration" (click)="header='Customer Service'" routerLink="/home/core">&nbsp;<label>View Customer</label></a>
+  </button>
+</mat-menu>
+
+<mat-menu #userMenu="matMenu" xPosition="before">
+  <button mat-menu-item class="custom_menu">
+    <mat-icon class="white-icon">supervised_user_circle</mat-icon>
+    <a class="text-decoration" (click)="header='User Service'" routerLink="/home/user/core">&nbsp;<label>Users</label></a>
+  </button>
+  <button mat-menu-item>
+    <mat-icon class="white-icon">verified_user</mat-icon>
+    <a class="text-decoration" (click)="header='User Service'" routerLink="/home/role/core">&nbsp;<label>Roles</label></a>
+  </button>
+</mat-menu>
+
+<mat-menu #productMenu="matMenu" xPosition="after" layout="row" flex layout-align="end center">
+  <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
+    <a class="text-decoration" (click)="header='Product Service'" routerLink="/home/product">
+      <mat-icon class="white-icon">add_to_queue</mat-icon>&nbsp;<label>Create Product</label>
+    </a>
+  </button>
+  <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
+    <a class="text-decoration" (click)="header='Product Service'" routerLink="/home/product/core">
+      <mat-icon class="white-icon">update</mat-icon>&nbsp;<label>View & Update Product</label>
+    </a>
+  </button>
+  <button mat-menu-item [hidden]="hasAdmin" class="custom_menu">
+    <a class="text-decoration" (click)="header='Product Service'" routerLink="/home/product/core">
+      <mat-icon class="white-icon">view_list</mat-icon>&nbsp;<label>View Product</label>
+    </a>
+  </button>
+</mat-menu>

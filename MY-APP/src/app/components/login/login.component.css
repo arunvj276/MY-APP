@@ -1,0 +1,36 @@
+.login-mat-card-div{
+    width: 400px;
+    height: 300px;
+    min-height: 367px;
+    margin-left: 437px;
+    margin-top: 93px;
+}
+
+.login-header-matMenu{
+
+    margin-left: 963px;
+}
+
+
+
+.white-icon { color: white; }
+
+.img-responsive{
+
+    width: 34px;
+    height: 36px;
+    margin-top: 0px;
+
+}
+
+.emoji-footer{
+
+    margin-left: 1123px;
+    margin-top: -31px;
+}
+
+#btmFooter {
+    align-self: flex-end;
+    background-color: black;
+    padding: 10px;
+}

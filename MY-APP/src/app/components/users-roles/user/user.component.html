@@ -1,0 +1,27 @@
+
+<div class="form-popup">
+    <mat-toolbar color="primary">
+        <span class="fill-remaining-space">{{headerProduct}}</span>
+        <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1">
+            <mat-icon>clear</mat-icon>
+        </button>
+    </mat-toolbar>
+    <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)" class="form form-container">
+        <input matInput hidden #id=ngModel name="id" [(ngModel)]="user.id">
+        <mat-form-field class="form-element">
+            <input matInput placeholder="Enter user name" #userName=ngModel name="userName"
+                [(ngModel)]="user.userName" required pattern="[A-Z,a-z]{2,10}">
+            <mat-error *ngIf="!userName.valid">user name should be valid</mat-error>
+        </mat-form-field><br>
+        <mat-form-field class="form-element">
+            <mat-select placeholder="Roles" name="role" [(ngModel)]="user.role" required >
+                <mat-option value="Team-Member">Team-Member</mat-option>
+                <mat-option value="Admin">Admin</mat-option>
+                <mat-option value="Guest">Guest</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="button-row">
+            <button mat-raised-button color="primary" [disabled]="!userForm.valid" type="submit">Submit</button>
+        </div>
+    </form>
+</div>

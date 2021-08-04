@@ -1,0 +1,51 @@
+<div class="edit-panel">
+  <!-- <button mat-flat-button color="primary" (click)="addCustomerDialogueOpen()">ADD CUSTOMER</button> -->
+<mat-form-field class="search-form-field" floatLabel="never">
+  <input matInput [(ngModel)]="searchKey" placeholder="Search by Customer Id" autocomplete="off" (keyup)="applyFilter()">
+  <button mat-button matSuffix mat-icon-button aria-label="Clear"*ngIf="searchKey"  (click)="onSearchClear()">
+    <mat-icon>close</mat-icon>
+  </button>
+</mat-form-field>
+</div>
+<div class="mat-elevation-z8 table-margin table-responsive">
+  <table mat-table matSort [dataSource]="dataSource">
+    <ng-container  matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Customer Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+    <ng-container  matColumnDef="mobileNumber">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Mobile Service Number </th>
+      <td mat-cell *matCellDef="let element"> {{element.mobileNumber}} </td>
+    </ng-container>
+
+ 
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    
+    <ng-container  matColumnDef="product">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Product </th>
+      <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+    </ng-container>
+
+    
+    <ng-container  matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.price | currency}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef [hidden]="!hasAdmin">Actions</th>
+      <td mat-cell *matCellDef="let row" [hidden]="!hasAdmin">
+        <button mat-icon-button (click)="onEdit(row)"><mat-icon>launch</mat-icon></button>
+        <button mat-icon-button color="warn" (click)="onDelete(row)"><mat-icon>delete_outline</mat-icon></button>
+      </td>
+    </ng-container>
+
+    <tr class="header-sticky" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row  *matRowDef="let row; columns: displayedColumns;" ></tr>
+  </table>
+</div>
+<mat-paginator mat-row class="paginator" [pageSizeOptions]="[10, 15, 20]" showFirstLastButtons></mat-paginator>

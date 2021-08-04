@@ -1,0 +1,45 @@
+<div class="edit-panel">
+<mat-card>
+    <mat-card-content>
+        <mat-toolbar color="primary">
+            <span class="fill-remaining-space">{{headerCustomer}}</span>
+            <!-- <button class="btn-dialog-close" mat-stroked-button (click)="onClose()" tabIndex="-1"><mat-icon>clear</mat-icon></button> -->
+        </mat-toolbar>
+        <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)" class="form-container">
+            <input matInput hidden #id=ngModel name="id" [(ngModel)]="customer.id">
+            <div >
+            <mat-form-field class="form-element" appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+             <input matInput placeholder="Enter Mobile Service Number" #mobileNumber=ngModel name="mobileNumber"
+                    [(ngModel)]="customer.mobileNumber" required pattern="[0-9]{10,10}">
+                <mat-error *ngIf="!mobileNumber.valid">Mobile number should be 10 digits</mat-error>
+            </mat-form-field>
+            <mat-form-field class="form-element" appearance="outline">
+                <mat-label>Customer Name</mat-label>
+                <input matInput placeholder="Enter name" name="name" [(ngModel)]="customer.name" required
+                    pattern="[A-Z,a-z]{3,10}">
+            </mat-form-field>
+            </div>
+            <div>
+            <mat-form-field class="form-element" appearance="outline">
+                <mat-label>Product</mat-label>
+                <mat-select placeholder="Products" name="product" [(ngModel)]="customer.product" required>
+                    <mat-option value="Prime">Prime</mat-option>
+                    <mat-option value="Netflix">Netflix</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field class="form-element" appearance="outline">
+                <mat-label>Product Price</mat-label>
+                <input matInput placeholder="Enter price" #price=ngModel name="price" [(ngModel)]="customer.price"
+                    required>
+            </mat-form-field>
+            </div>
+            <div class="button-row">
+                <button mat-raised-button color="primary" [disabled]="!customerForm.valid" type="submit">Submit</button>&nbsp;&nbsp;&nbsp;
+                <button mat-raised-button *ngIf="backNavigation" color="primary" routerLink="/home/core"
+                        >Back</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+</div>
