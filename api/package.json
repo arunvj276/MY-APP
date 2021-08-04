@@ -1,0 +1,12 @@
+{
+  "name": "jsonserver",
+  "version": "1.0.0",
+  "description": "Fake rest for testing",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server mock.json"
+  },
+  "dependencies": {
+    "json-server": "^0.16.3"
+  }
+}

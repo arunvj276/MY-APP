@@ -1,0 +1,201 @@
+{
+  "customer": [
+    {
+      "id": 1002,
+      "mobileNumber": "9925781931",
+      "name": "Philp",
+      "product": "Netflix",
+      "price": 25
+    },
+    {
+      "id": 1003,
+      "mobileNumber": "9928381932",
+      "name": "Kate",
+      "product": "Carrier - Billing-Optin",
+      "price": 25
+    },
+    {
+      "id": 1004,
+      "mobileNumber": "9927381933",
+      "name": "Alex",
+      "product": "Netflix",
+      "price": 30
+    },
+    {
+      "id": 1005,
+      "mobileNumber": "9929381934",
+      "name": "Wil",
+      "product": "Netflix",
+      "price": 35
+    },
+    {
+      "id": 1006,
+      "mobileNumber": "9924381935",
+      "name": "Don",
+      "product": "Carrier - Billing-Optin",
+      "price": 50
+    },
+    {
+      "id": 1007,
+      "mobileNumber": "9927381936",
+      "name": "Broadman",
+      "product": "Carrier - Billing-Optin",
+      "price": 30
+    },
+    {
+      "id": 1008,
+      "mobileNumber": "9928381937",
+      "name": "Paul",
+      "product": "Carrier - Billing-Optin",
+      "price": 40
+    },
+    {
+      "id": 1009,
+      "mobileNumber": "9927381938",
+      "name": "Kaul",
+      "product": "Bundle - 350GB",
+      "price": "60"
+    },
+    {
+      "id": 1010,
+      "mobileNumber": "9927381939",
+      "name": "Wilsmit",
+      "product": "Bundle - 350GB",
+      "price": 60
+    },
+    {
+      "id": 1011,
+      "mobileNumber": "9927381940",
+      "name": "Johny",
+      "product": "Bundle - 350GB",
+      "price": 30
+    },
+    {
+      "id": 1012,
+      "mobileNumber": "9927381941",
+      "name": "Jia",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1013,
+      "mobileNumber": "9927381942",
+      "name": "Mat",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1014,
+      "mobileNumber": "9927381943",
+      "name": "Joseph",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1015,
+      "mobileNumber": "9927381944",
+      "name": "Joshva",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1016,
+      "mobileNumber": "9927381945",
+      "name": "Yoshva",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1017,
+      "mobileNumber": "9927381946",
+      "name": "Zin",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1018,
+      "mobileNumber": "9927381947",
+      "name": "Tim",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1019,
+      "mobileNumber": "9927381948",
+      "name": "Yao",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "id": 1020,
+      "mobileNumber": "9927381949",
+      "name": "Yao",
+      "product": "Bundle - 350GB",
+      "price": 50
+    },
+    {
+      "mobileNumber": "8056646396",
+      "name": "Arun",
+      "product": "Netflix",
+      "price": "70",
+      "id": 1021
+    },
+    {
+      "id": 1022,
+      "mobileNumber": "8056646396",
+      "name": "Arun",
+      "product": "Netflix",
+      "price": "60"
+    }
+  ],
+  "product": [
+    {
+      "id": 2000,
+      "productName": "Prime",
+      "price": 50
+    },
+    {
+      "id": 2001,
+      "productName": "Netflix",
+      "price": 60
+    },
+    {
+      "id": 2002,
+      "productName": "Bundle-350GB",
+      "price": 70
+    },
+    {
+      "id": 2003,
+      "productName": "Carrier-Billing-Opt-in",
+      "price": 80
+    }
+  ],
+  "role": [
+    {
+      "id": 3000,
+      "roleName": "Admin"
+    },
+    {
+      "id": 3001,
+      "roleName": "Team-Member"
+    },
+    {
+      "id": 3002,
+      "roleName": "Guest"
+    }
+  ],
+  "user": [
+    {
+      "id": 4000,
+      "userName": "admin",
+      "role": "Admin",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6ImFkbWluIiwiYWRtaW4iOnRydWV9.yqp5msd8Em1R3l1Fi5V6GDaeLy6wg0V7TyhuZYbazm0"
+    },
+    {
+      "id": 4001,
+      "userName": "user",
+      "role": "Team-Member",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6InVzZXIiLCJhZG1pbiI6ZmFsc2V9.EtKddBVA5KabeHm4YGjSV7aayCnmB0MM63LohEqbXDg"
+    }
+  ]
+}
