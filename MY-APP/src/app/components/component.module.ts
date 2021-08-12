@@ -65,6 +65,7 @@ import { ProductService } from '../service/product.service';
 import { UserService } from '../service/user.service';
 import { RoleService } from '../service/role.service';
 import { LoaderService } from '../service/loader.service';
+import { FormComponent } from './form/form.component';
 
 
 
@@ -78,7 +79,7 @@ import { LoaderService } from '../service/loader.service';
      HomeComponent,
      LoaderComponent, 
      ProductComponent, 
-     ProductListComponent, UserComponent, RoleComponent, UserListComponent, RoleListComponent
+     ProductListComponent, UserComponent, RoleComponent, UserListComponent, RoleListComponent, FormComponent
     ],
   imports: [
     
@@ -149,6 +150,6 @@ import { LoaderService } from '../service/loader.service';
     NO_ERRORS_SCHEMA
   ],
   providers: [CoreService,DatePipe,NotificationService,ProductService,UserService,RoleService,LoaderService],
-  exports:[ComponentRoutingModule,CoreComponent,LoginComponent,HomeComponent,LoaderComponent,CommonModule]
+  exports:[ComponentRoutingModule,CoreComponent,LoginComponent,HomeComponent,LoaderComponent,CommonModule,FormComponent]
 })
 export class ComponentModule { }

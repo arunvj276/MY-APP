@@ -8,6 +8,7 @@ import { ProductListComponent } from './product/product-list/product-list.compon
 import { UserListComponent } from './users-roles/user-list/user-list.component';
 import { RoleListComponent } from './users-roles/role-list/role-list.component';
 import { CustomerComponent } from './customer/customer/customer.component';
+import { FormComponent } from './form/form.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -18,7 +19,8 @@ const routes: Routes = [
     { path: 'product', component: ProductComponent },
     { path: 'product/core', component: ProductListComponent },
     { path: 'user/core', component: UserListComponent },
-    { path: 'role/core', component: RoleListComponent }
+    { path: 'role/core', component: RoleListComponent },
+    { path: 'form', component: FormComponent }
     ]
   }];
 
