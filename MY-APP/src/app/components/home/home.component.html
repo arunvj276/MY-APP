@@ -125,6 +125,10 @@
         <label mat-line *ngIf="isExpanded">User Service</label>
       </a>
       <mat-divider></mat-divider>
+      <a mat-list-item class="white-icon" (click)="header='Registration Service'" routerLink="/home/form">
+        <mat-icon mat-list-icon>assignment</mat-icon>
+        <label mat-line *ngIf="isExpanded" >Registration Form</label>
+      </a>
     </mat-nav-list>
   </mat-drawer>
   <div>
@@ -135,42 +139,35 @@
     <span class="align-center"></span>
     <span class="example-spacer"></span>
     <div class="header-margin">
-      <button mat-icon-button [matMenuTriggerFor]="menu" class="white-icon">
-        <mat-icon mat-list-icon class="blue-icon">account_circle</mat-icon>&nbsp;
+      <button mat-icon-button class="white-icon">
+        <mat-icon mat-list-icon class="blue-icon">account_circle</mat-icon>
         <span mat-line class="blue-icon">{{user}}</span>
+      </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-icon-button (click)="logout()">
+      <mat-icon mat-list-icon class="blue-icon">exit_to_app</mat-icon>
+      <span mat-line class="blue-icon">Logout</span>
       </button>
     </div>
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="logout()">
-        <mat-icon class="white-icon">highlight_off</mat-icon>
-        <span class="white-icon">Logout</span>
-      </button>
-    </mat-menu>
   </mat-toolbar-row>
 </mat-toolbar>
 </div>
 <mat-divider></mat-divider>
 <section class="content">
     <router-outlet></router-outlet>
-  </section>
+</section><br><br>
+  <footer class="md-padding footer-view">
+    <div id="btmFooter">
+    </div>
+  </footer>
 </mat-drawer-container>
 
-<footer class="md-padding footer-view">
-  <div id="btmFooter">
-    <img class="img-responsive" src="assets/Ericsson.png" alt="image">&nbsp;&nbsp;
-    <div class="emoji-footer">
-      <mat-icon class="white-icon">thumb_up_alt</mat-icon>&nbsp;&nbsp;
-      <mat-icon class="white-icon">sentiment_very_satisfied</mat-icon>&nbsp;&nbsp;
-      <mat-icon class="white-icon">share</mat-icon>
-    </div>
-  </div>
-</footer>
+
 </div>
 <!-- List of Menus -->
 <mat-menu #customerMenu="matMenu" xPosition="before">
   <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
     <mat-icon class="white-icon">add_to_queue</mat-icon>
-    <a class="text-decoration" (click)="header='Customer Service'" routerLink="/home/customer">&nbsp;<label>Create Customer</label></a>
+    <a class="text-decoration" (click)="header='Customer Service';onNavigateCustomer();">&nbsp;<label>Create Customer</label></a>
   </button>
   <button mat-menu-item [hidden]="!hasAdmin">
     <mat-icon class="white-icon">update</mat-icon>
@@ -195,7 +192,7 @@
 
 <mat-menu #productMenu="matMenu" xPosition="after" layout="row" flex layout-align="end center">
   <button mat-menu-item [hidden]="!hasAdmin" class="custom_menu">
-    <a class="text-decoration" (click)="header='Product Service'" routerLink="/home/product">
+    <a class="text-decoration" (click)="header='Product Service';onNavigateProduct();" >
       <mat-icon class="white-icon">add_to_queue</mat-icon>&nbsp;<label>Create Product</label>
     </a>
   </button>
