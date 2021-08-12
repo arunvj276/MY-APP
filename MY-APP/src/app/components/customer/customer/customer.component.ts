@@ -38,6 +38,9 @@ export class CustomerComponent implements OnInit {
       this.customer = this.coreService.getCustomerPopulate();
       this.updateFlag = true;
     }
+    else{
+      this.headerCustomer = "Add Customer";
+    }
   }
 
 
@@ -56,15 +59,17 @@ export class CustomerComponent implements OnInit {
     if (!this.updateFlag) {
       this.coreService.addCustomer(form.value).subscribe((data: any) => {
         console.log("Add object --> ", data);
-  
+        this.notificationService.success(":: Added Successfully");
       });
     } else {
       this.coreService.updateCustomer(form.value).subscribe((data: any) => {
         console.log("Update object --> ", data);
+        this.notificationService.success(":: Updated Successfully");
         
       });
 
     }
+    this.router.navigate(["/home/core"]);
   }
 
 
