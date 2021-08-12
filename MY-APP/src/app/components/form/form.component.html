@@ -1,0 +1,72 @@
+<div class="container">
+    <div>
+        <h2><span class="title-align">Registration Form</span></h2>
+    </div>
+    <mat-grid-list cols="2" rowHeight="500px">
+
+        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="form-container">
+            <mat-grid-tile>
+                <div class="example-container">
+                    <mat-form-field appearance="fill" class="width-50">
+                        <mat-label>First Name</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <mat-form-field appearance="fill" class="width-50 ml-2">
+                        <mat-label>Surname</mat-label>
+                        <input matInput>
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill" class="width-100">
+                        <mat-label>Email address</mat-label>
+                        <input matInput placeholder="Ex. pat@example.com">
+                    </mat-form-field>
+                    <br>
+                    <mat-form-field appearance="fill" class="width-100">
+                        <mat-label>Enter password</mat-label>
+                        <input matInput type="password">
+                    </mat-form-field>
+                    <br>
+                    <label id="example-radio-group-label">Gender: </label>
+                    <br>
+                    <mat-radio-group aria-label="Select an option" class="form-element">
+                        <mat-radio-button value="1">Male</mat-radio-button>
+                        <mat-radio-button class="example-radio-button" value="2">Female</mat-radio-button>
+                        <mat-radio-button class="example-radio-button" value="3">Custom</mat-radio-button>
+                    </mat-radio-group>
+                    <br><br>
+                    <mat-form-field appearance="fill" class="form-element">
+                        <mat-label>Select Role</mat-label>
+                        <mat-select multiple>
+                            <mat-option *ngFor="let role of roleList" [value]="role">{{role}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    <br>
+                </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <div class="example-right-container">
+                    <input type="file" hidden class="file-input" [accept]="requiredFileType"
+                        (change)="onFileSelected($event)" #fileUpload>
+                    <div class="file-upload">
+
+                        <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+                            <mat-icon>attach_file</mat-icon>
+
+                        </button>
+
+                        {{fileName || "No file uploaded yet."}}
+
+                    </div><br><br>
+                </div>
+                <div class="container-operation">
+                    <button mat-raised-button color="primary" [disabled]="!registerForm.valid"
+                        type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="reset" mat-raised-button color="primary"
+                        (click)="registerForm.reset();resetForm();">Reset</button>
+                </div>
+            </mat-grid-tile>
+
+        </form>
+    </mat-grid-list>
+
+</div>
